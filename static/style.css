@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    padding: 20px 40px;
+    background: #0f0f0f;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.logo i {
+    font-size: 28px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.music-player {
+    flex: 1;
+    max-width: 550px;
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.cover {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.cover img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 255, 136, 0.2);
+}
+
+.titre {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titre h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.titre h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #888;
+    padding: 0;
+}
+
+center {
+    display: none;
+}
+
+.lecteur {
+    margin-top: 20px;
+}
+
+.mejs__container {
+    background: transparent !important;
+}
+
+.mejs__controls {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.mejs__controls .mejs__time-rail {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.mejs__controls .mejs__time-rail span {
+    height: 6px;
+    border-radius: 10px;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-total {
+    background: #2a2a2a;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-loaded {
+    background: #3a3a3a;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-current {
+    background: #00ff88;
+}
+
+.mejs__controls .mejs__time {
+    width: 100%;
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.mejs__controls span.mejs__currenttime {
+    color: #fff;
+}
+
+.mejs__controls span.mejs__duration {
+    color: #888;
+}
+
+.mejs__controls .mejs__playpause-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+}
+
+.mejs__controls .mejs__playpause-button button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #00ff88;
+    border: none;
+    color: #0a0a0a;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: FontAwesome;
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
+}
+
+.mejs__controls .mejs__playpause-button button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 255, 136, 0.6);
+}
+
+.mejs__controls .mejs__play button:before {
+    content: "\f04b";
+}
+
+.mejs__controls .mejs__pause button:before {
+    content: "\f04c";
+}
+
+.mejs__controls .mejs__volume-button {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.mejs__controls .mejs__volume-button button {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 18px;
+    font-family: FontAwesome;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mejs__controls .mejs__volume-button button:hover {
+    color: #00ff88;
+}
+
+.mejs__controls .mejs__mute button:before {
+    content: "\f028";
+}
+
+.mejs__controls .mejs__unmute button:before {
+    content: "\f026";
+}
+
+.mejs__controls .mejs__horizontal-volume-slider {
+    position: absolute;
+    left: 60px;
+    bottom: 28px;
+    width: 100px;
+    height: 4px;
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
+    background: #00ff88;
+    border-radius: 10px;
+}
+
+.mejs__controls .mejs__time-handle,
+.mejs__controls .mejs__time-float {
+    display: none;
+}
+
+.right-section {
+    flex: 1;
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.playlist-header i {
+    color: #00ff88;
+    font-size: 20px;
+}
+
+.playlist-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.lyrics-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lyrics {
+    text-align: center;
+    width: 100%;
+}
+
+#song-lyrics {
+    font-size: 48px;
+    font-weight: 700;
+    color: #00ff88;
+    line-height: 1.6;
+    transition: opacity 0.3s ease;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+#song-lyrics.updating {
+    opacity: 0.3;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .music-player {
+        max-width: 100%;
+    }
+    
+    #song-lyrics {
+        font-size: 36px;
+    }
+}

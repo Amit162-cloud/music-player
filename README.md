@@ -2,8 +2,6 @@
 
 A sleek, modern web-based music player built with Django, featuring a Spotify-inspired dark UI with playlist management and seamless playback.
 
-![SoundFlow](media/Capture0.png)
-
 ## ✨ Features
 
 - **Modern Dark UI**: Clean, professional interface inspired by Spotify with neon green accents
